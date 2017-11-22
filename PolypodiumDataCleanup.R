@@ -2,6 +2,7 @@ library (tidyr)
 
 #Remove samples with missing coordinates and write txt file for each species for import into GIS
 
+#P. virgninianum complex = (P.appalachianum x P.sibiricum)
 #P.appalachianum
 pappacleanup <- subset(Pappalachianum, !is.na(decimallatitude))
 write.table(pappacleanup, "Pappalachianum_coords.txt", sep="\t", row.names =FALSE, col.names=TRUE)
@@ -13,3 +14,17 @@ write.table(virginiacleanup, "Pvirginianum_coords.txt", sep="\t", row.names =FAL
 #P.sibiricum
 sibiricleanup <- subset(Psibiricum, !is.na(decimallatitude))
 write.table(sibiricleanup, "Psibiricum_coords.txt", sep="\t", row.names =FALSE, col.names=TRUE)
+
+#P.calirhiza complex = (P.glycyrrhiza x P.californicum)
+#P.californicum
+californicumcleanup <- subset(Pcalifornicum, !is.na(decimallatitude))
+write.table(californicumcleanup, "Pcalifornicum_coords.txt", sep="\t", row.names =FALSE, col.names=TRUE)
+
+#P. glycyrrhiza
+glycycleanup <- subset(Pglycyrrhiza, !is.na(decimallatitude))
+write.table(glycycleanup, "Pglycyrrhiza_coords.txt", sep="\t", row.names =FALSE, col.names=TRUE)
+
+#P. calirhiza
+calirhizacleanup <- subset(Pcalirhiza, !is.na(decimallatitude))
+write.table(calirhizacleanup, "Pcalirhiza_coords.txt", sep="\t", row.names =FALSE, col.names=TRUE)
+
