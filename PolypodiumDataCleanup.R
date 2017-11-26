@@ -28,3 +28,14 @@ write.table(glycycleanup, "Pglycyrrhiza_coords.txt", sep="\t", row.names =FALSE,
 calirhizacleanup <- subset(Pcalirhiza, !is.na(decimallatitude))
 write.table(calirhizacleanup, "Pcalirhiza_coords.txt", sep="\t", row.names =FALSE, col.names=TRUE)
 
+#P. hesperium complex =(P. glycyrrhiza x P. amorphum)
+#P. glycyrrhiza - Already done
+
+#P. amorphum
+amorphcleanup <- subset(Pamorphum, !is.na(decimallatitude))
+write.table(amorphcleanup, "Pamorphum_coords.txt", sep="\t", row.names =FALSE, col.names=TRUE)
+
+#P. hesperium
+hespercleanup <- subset(Phesperium, !is.na(decimallatitude))
+write.table(hespercleanup, "Phesperium_coords.txt", sep="\t", row.names =FALSE, col.names=TRUE)
+
